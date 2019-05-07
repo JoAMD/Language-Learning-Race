@@ -15,3 +15,9 @@ goal in this game is to complete the given sentences with proper grammar/words.
 
 [![Language Learning Race | Demo | Menu and game](http://img.youtube.com/vi/bmacvXo7Ppk/0.jpg)](http://www.youtube.com/watch?v=bmacvXo7Ppk "Language Learning Race | Demo | Menu and game")
 
+## APK file to game (WIP)
+
+
+
+https://drive.google.com/open?id=1EW9p908toHp0S4jPb00MQ-0_zhhq09Js
+
