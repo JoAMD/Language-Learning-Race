@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SubmitButton : MonoBehaviour
+public class SubmitButtonvsCPU : MonoBehaviour
 {
     public ToggleGroup toggleGroup;
     public QuestionsAndOptionsLoader questionsLoader;
@@ -13,7 +13,7 @@ public class SubmitButton : MonoBehaviour
     //public Transform redCrossMark, greenTickMark, redCrossMark1, greenTickMark1;
     public SpriteRenderer spriteRendererYellow, spriteRendererOrange, yellowIndicator, orangeIndicator;
     //private Vector3 orangePos = new Vector3(16.2f, 8.62f, 1f), yellowPos = new Vector3(-15.5f, 8.62f, 1f);
-    public CarMove yellowCarMove, orangeCarMove;
+    public Toggle[] toggles;
 
     public void submit()
     {
@@ -55,11 +55,21 @@ public class SubmitButton : MonoBehaviour
                 }
                 toggleEnum.MoveNext();
             }
-            if(i % 2 == 0)
+            bool dontIncrememnt = false;
+            if (i % 2 == 0)
             {
                 gameObject.GetComponent<Image>().color = Color.yellow;
                 yellowIndicator.color = Color.yellow;
                 orangeIndicator.color = Color.white;
+                
+                ++i;
+
+                //Select a toggle (CPU)
+                toggles[Random.Range(0, 4)].isOn = true;
+
+                //Click on submit button (CPU)
+                submit();
+                dontIncrememnt = true;
             }
             else
             {
@@ -72,18 +82,11 @@ public class SubmitButton : MonoBehaviour
                     Debug.Log("Orange is correct!");
                     spriteRendererOrange.sprite = green;
                     //greenTickMark.position = orangePos;
-                    orangeCarMove.orange = true;
-                    yellowCarMove.orange = true;
-                    orangeCarMove.startTime = Time.time;
-                    //orangeCarMove.moveFront();
                 }
                 else
                 {
                     Debug.Log("Orange is wrong!");
                     spriteRendererOrange.sprite = red;
-                    orangeCarMove.orange = false;
-                    yellowCarMove.orange = false;
-                    orangeCarMove.startTime = Time.time;/////////////
                     //redCrossMark.position = orangePos;
                 }
                 if (yellowIscorrect)
@@ -91,25 +94,21 @@ public class SubmitButton : MonoBehaviour
                     Debug.Log("Yellow is correct!");
                     spriteRendererYellow.sprite = green;
                     //greenTickMark1.position = yellowPos;
-                    //yellowCarMove.moveFront();
-                    yellowCarMove.startTime = Time.time;
-                    orangeCarMove.yellow = true;
-                    yellowCarMove.yellow = true;
                 }
                 else
                 {
                     Debug.Log("Yellow is wrong!");
                     spriteRendererYellow.sprite = red;
-                    orangeCarMove.yellow = false;
-                    yellowCarMove.yellow = false;
-                    yellowCarMove.startTime = Time.time;//////////
                     //redCrossMark1.position = yellowPos;
                 }
 
                 questionsLoader.loadNextQuestion();
             }
 
-            i++;
+            if (!dontIncrememnt)
+            {
+                i++;
+            }
         }
     }
 
