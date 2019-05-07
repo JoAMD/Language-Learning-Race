@@ -35,7 +35,6 @@ public class CarMove : MonoBehaviour
 
             if (!orange && gameObject.name.Equals("Orange Lambo") || !yellow && gameObject.name.Equals("Yellow Lambo"))
             {
-                Debug.Log(orange + " " + gameObject.name);
 
                 //Inverting direction for false answer
                 moveDist *= -1;
