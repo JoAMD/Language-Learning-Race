@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Options
   - OptionsHolder
+  - Q1
+  - QText
+  - AText
   layers:
   - Default
   - TransparentFX

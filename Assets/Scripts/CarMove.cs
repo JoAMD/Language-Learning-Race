@@ -12,7 +12,18 @@ public class CarMove : MonoBehaviour
     public float roadInitialSpeed = 0;
     public bool orange = false, yellow = false;
     private float moveDist = 0.5f;
-    
+    public AudioClip carDoorClip, carStartClip;
+    private AudioSource source;
+
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+        source.clip = carDoorClip;
+        source.Play();
+        source.clip = carStartClip;
+        source.PlayDelayed(3);
+    }
+
     private void Update()
     {
         timeElapsed = Time.time - startTime;
