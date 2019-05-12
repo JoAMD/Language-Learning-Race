@@ -43,10 +43,18 @@ public class SubmitButton : MonoBehaviour
                     if(i % 2 == 0)
                     {
                         orangeBubbleText.text = toggle.GetComponentInChildren<Text>().text;
+
+                        //Store the user's answer option number
+                        Data.instance.user1Answer[i / 2] = int.Parse(toggle.name[6].ToString()) - 1;
+                    
                     }
                     else
                     {
                         yellowBubbleText.text = toggle.GetComponentInChildren<Text>().text;
+
+                        //Store the user's answer option number
+                        Data.instance.user2Answer[i / 2] = int.Parse(toggle.name[6].ToString()) - 1;
+
                     }
 
                     toggle.isOn = false; //find a workaround!!!!!!!!!!!!!!!!!!!!!!!!!$$$$$$$$$$$$$

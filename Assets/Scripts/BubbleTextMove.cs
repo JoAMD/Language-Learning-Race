@@ -6,12 +6,13 @@ public class BubbleTextMove : MonoBehaviour
 {
     public GameObject car;
     public Canvas canvas;
-    private Vector3 offset;// = new Vector3(-65f, 70f, 0f);
+    private Vector3 offset = new Vector3(-65f, 70f, 0f);
     // Start is called before the first frame update
     void Start()
     {
-        //offset = new Vector3(-135f, 20.5f, 0f);
-        offset = transform.position - worldToUISpace(canvas, car.transform.position);// + new Vector3(50f, 0, 0);
+        if(gameObject.name.EndsWith("Yellow"))
+            offset = new Vector3(-135f, 20.5f, 0f);
+        //offset = transform.position - worldToUISpace(canvas, car.transform.position);// + new Vector3(50f, 0, 0);
     }
 
     // Update is called once per frame

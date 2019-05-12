@@ -9,6 +9,7 @@ public class Data : MonoBehaviour
     public List<string[]> options;
     public int[] answers;
     public Color orange = new Color(246f / 255f, 128f / 256f, 0f);
+    public int[] user1Answer, user2Answer;
 
     // Start is called before the first frame update
     void Awake()
@@ -33,6 +34,8 @@ public class Data : MonoBehaviour
         questions = new List<string>();
         options = new List<string[]>();
         answers = new int[100];
+        user1Answer = new int[50];
+        user2Answer = new int[50];
 
         string[] questionsAll = { "Are there any good restaurants around here? Yes, ______ the highway.",
                                 "What does your sister do? ______",

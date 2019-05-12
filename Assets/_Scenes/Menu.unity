@@ -1753,5 +1753,50 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8944607}
+    - target: {fileID: 8244750750336238192, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750750336238192, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750750336238192, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 134.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750750336238192, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 63.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750748441429630, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750748441429630, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 63.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750748444059422, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750748444059422, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244750748444059422, guid: 9edb8373412faa8489f76a81aed58a99,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9edb8373412faa8489f76a81aed58a99, type: 3}

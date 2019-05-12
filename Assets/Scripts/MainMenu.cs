@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void playGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void quitGame()
@@ -16,6 +16,11 @@ public class MainMenu : MonoBehaviour
 
     public void mainMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
+    }
+
+    public void roadMap()
+    {
+        SceneManager.LoadScene(2);
     }
 }
